@@ -18,7 +18,7 @@ const replicate = new Replicate({
 })
 const model =
   "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf"
-const redirect_uri = `http://localhost:${port}/callback`
+const redirect_uri = `http://localhost:${port}/api/callback`
 
 // modules
 const utils = require("./utils.js")
@@ -50,7 +50,7 @@ app.get("/api/login", async (req, res) => {
 })
 
 // request access token from spotify api using client credentials and generate image
-app.get("/callback", async (req, res) => {
+app.get("/api/callback", async (req, res) => {
   try {
     const { code, state } = req.query
     if (states.has(state)) {
