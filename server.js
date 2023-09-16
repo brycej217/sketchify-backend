@@ -87,7 +87,7 @@ app.get("/api/callback", async (req, res) => {
       topGenres = processor.topGenres(genreList, 5)
       prompt = topGenres.join(", ")
       image = await generate(prompt)
-      res.redirect(`http://localhost:3001/sketch?image=${image}&prompt=${prompt}`)
+      res.redirect(`https://sketchify-frontend.vercel.app/sketch?image=${image}&prompt=${prompt}`)
     } else {
       res.status(403).json({ error: "Invalid state parameter received" })
     }
