@@ -18,7 +18,7 @@ const replicate = new Replicate({
 })
 const model =
   "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf"
-const redirect_uri = `http://localhost:${port}/api/callback`
+const redirect_uri = `https://sketchify-backend-673009b3e188.herokuapp.com/api/callback`
 
 // modules
 const utils = require("./utils.js")
