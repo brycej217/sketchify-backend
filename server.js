@@ -100,7 +100,7 @@ app.get("/api/callback", async (req, res) => {
 // retrieve user's top items using access token
 const top = async (access_token) => {
   let response = await axios.get(
-    `https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=50`,
+    `https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=50`,
     {
       headers: {
         Authorization: `Bearer ${access_token}`,
